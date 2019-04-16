@@ -5,7 +5,10 @@ module.exports = function nuxtToast(moduleOptions) {
     this.addPlugin({
         src: path.resolve(__dirname, 'plugin.js'),
         ssr: true,
-        options: moduleOptions
+        options: {
+            ...moduleOptions,
+            parser: path.resolve(__dirname, 'parser')
+        }
     });
 };
 
