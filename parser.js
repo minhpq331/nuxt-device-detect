@@ -34,7 +34,7 @@ function isCrawler(a) {
     return REGEX_CRAWLER.test(a);
 }
 
-module.exports = function parseUserAgent(userAgent) {
+export default function parseUserAgent(userAgent) {
     const mobile = isMobile(userAgent);
     const mobileOrTablet = isMobileOrTablet(userAgent);
     const ios = isIos(userAgent);
